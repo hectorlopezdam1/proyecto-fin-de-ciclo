@@ -1,0 +1,61 @@
+<detalle-animal [animal]="selectedAnimal" *ngIf="selectedAnimal"></detalle-animal>
+<section style="background-color: #fddfad; margin-top: 80px; min-height:680px; padding: 50px;">
+<div class="row">
+<div *ngIf="animals?.length > 0 && isLogged; else isntLogged" class="col-7 ms-5">
+  <div *ngFor="let animal of animals" class="card mb-4" style="max-width: 1000px; background-color: #899dc4">
+    <div class="row g-0">
+      <div class="col-md-3">
+        <a (click)="openModal(animal)"><img *ngIf="animal?.foto" src="http://localhost:8080/app/uploads/img/{{animal.foto}}"
+          alt="No se puede ver la foto" class="img-thumbnail rounded my-3 ms-3" style="width: 200px;"></a>
+        <a (click)="openModal(animal)"><img *ngIf="!animal?.foto " src="http://localhost:8080/images/question.png"
+          alt="No se puede ver la foto" class="img-thumbnail rounded my-3 ms-3" style="width: 200px; height:200px;"></a>
+      </div>
+      <div class="col">
+        <div class="mt-2"style="border-bottom: 1px solid;"><h5 class="ms-1">{{animal.nombre}}</h5></div>
+        <div class="card-body">
+          <p class="card-text">{{animal.descripcion}}</p>
+          <p style="text-align: right;" *ngIf="isAdmin">
+            <button type="button" name="editar" [routerLink]="['/form', animal.id]" class="btn">Editar <i class="fas fa-edit"></i></button>
+            <button type="button" name="eliminar" (click)='delete(animal)' class="btn" style="margin-left:10px;">Eliminar <i class="fas fa-trash"></i></button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col" >
+  <div style="display: block; text-align: center;"><h2>Estás en la categoría: {{ categoria }}</h2></div>
+  <div class="mt-5" style="text-align: center; margin-left: 500px;">
+    <a (click)="check(0)"><h3 class="categ">Todos</h3></a>
+    <a (click)="check(1)"><h3 class="categ">Perros</h3></a>
+    <a (click)="check(2)"><h3 class="categ">Gatos</h3></a>
+    <a (click)="check(3)"><h3 class="categ">Roedores</h3></a>
+    <a (click)="check(4)"><h3 class="categ">Reptiles</h3></a>
+    <a (click)="check(5)"><h3 class="categ">Aves</h3></a>
+  </div>
+</div>
+</div>
+<div *ngIf="animals?.length == 0" class="container alert alert-info text-center">Lo sentimos, no hay animales en adopción.</div>
+<ng-template #isntLogged>No estas loggeado</ng-template>
+<paginator-nav *ngIf="paginador" [paginador] = "paginador"></paginator-nav>
+</section>
+
+<style type="text/css">
+  .categ{
+    border-right: 3px solid #445881; margin-bottom:10px; background-color: #899dc4; width:150px; height:40px; border-radius: 5px;
+  }
+  .categ:hover{
+    background-color: #6785c2;
+  }
+
+  a{
+    cursor: pointer;
+  }
+
+  .btn{
+    background-color: #e89b8e;
+  }
+  .btn:hover{
+    background-color: #ff826e;
+  }
+</style>

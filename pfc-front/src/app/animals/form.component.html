@@ -1,0 +1,83 @@
+<div style="background-color: #fddfad;">
+
+<div class="container" style=" padding:20px;">
+
+  <div class="mb-4" style="margin-top:120px; margin-left: 260px;">
+    <h2>Introduce los datos del animal</h2>
+  </div>
+
+  <div class="container text-white mb-4" style="width: 61%; background-color: #445881; padding:30px; border-radius: 15px;">
+
+  <form id="adoptform" #animalForm="ngForm">
+
+  <!-- nombre -->
+  <div class="row">
+  <div class="mb-3" style="width:50%">
+    <label for="nombreinput" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="nombreinput" [(ngModel)]="animal.nombre" name="nombre" #nombre="ngModel" required maxlength="20">
+  </div>
+  <div class="col alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" style="height: 37px; margin-top:32px;">
+    <p *ngIf="nombre.errors.required" style="margin-top:-10px;">
+      El nombre es un campo obligatorio.
+    </p>
+  </div>
+  </div>
+
+  <!-- tipo -->
+  <div class="row">
+  <div class="mb-3" style="width: 50%">
+    <label for="tipoinput" class="form-label">Tipo de animal</label>
+    <select class="form-select" [(ngModel)]="animal.tipo" name="tipo" [compareWith]="compareTipos" #tipo="ngModel" required>
+      <option [ngValue]="undefined">Seleccionar tipo</option>
+      <option *ngFor="let tipo of tipos" [ngValue]="tipo">{{ tipo.nombre }}</option>
+    </select>
+  </div>
+  <div class="col alert alert-danger" *ngIf="tipo.invalid && (tipo.dirty || tipo.touched)" style="height: 37px; margin-top:32px;">
+    <p *ngIf="tipo.errors.required" style="margin-top:-10px;">
+      Debes seleccionar un tipo.
+    </p>
+  </div>
+  </div>
+
+  <!-- edad -->
+  <div class="row">
+  <div class="mb-3" style="width: 50%">
+    <label for="edadinput" class="form-label">Edad</label>
+    <input type="number" class="form-control" id="edadinput" [(ngModel)]="animal.edad" name="edad" #edad="ngModel" required>
+  </div>
+  <div class="col alert alert-danger" *ngIf="edad.invalid && (edad.dirty || edad.touched)" style="height: 37px; margin-top:32px;">
+    <p *ngIf="edad.errors.required" style="margin-top:-10px;">
+      La edad es un campo obligatorio.
+    </p>
+  </div>
+  </div>
+
+  <div class="row">
+  <div class="mb-3" style="width: 50%">
+    <label for="descinput" class="form-label">Descripción</label>
+    <textarea style="resize: none;" rows=4 class="form-control" id="descinput" [(ngModel)]="animal.descripcion" form="adoptform" name="descripcion" #descripcion="ngModel" required></textarea>
+  </div>
+  <div class="col alert alert-danger" *ngIf="descripcion.invalid && (descripcion.dirty || descripcion.touched)" style="height: 37px; margin-top:32px;">
+    <p *ngIf="descripcion.errors.required" style="margin-top:-10px;">
+      Introduce una breve descripción para el animal.
+    </p>
+  </div>
+  </div>
+
+
+  <div>
+    <button type="submit" class="btn" style="background-color: #ff826e" role="button" (click) = 'create()' *ngIf="!animal.id else elseBlock" [disabled]="!animalForm.form.valid">Enviar</button>
+    <ng-template #elseBlock>
+      <button type="submit" class="btn" style="background-color: #ff826e" role="button" (click) = 'update()' [disabled]="!animalForm.form.valid">Guardar</button>
+    </ng-template>
+  </div>
+
+
+</form>
+</div>
+</div>
+</div>
+
+<style type="text/css">
+  .alert{}
+</style>

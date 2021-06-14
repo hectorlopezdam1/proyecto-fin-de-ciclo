@@ -1,0 +1,27 @@
+INSERT INTO tipo (nombre) VALUES("Perro");
+INSERT INTO tipo (nombre) VALUES("Gato");
+INSERT INTO tipo (nombre) VALUES("Roedor");
+INSERT INTO tipo (nombre) VALUES("Reptil");
+INSERT INTO tipo (nombre) VALUES("Ave");
+
+
+
+INSERT INTO animal (nombre, id_tipo, edad, foto, descripcion) VALUES("John", 1, 7, "john.jpg", "Este chico tan guapo se llama John y llegó a nosotros porque su propietario falleció, sin que nadie de su familia se hiciese cargo de él. John no había salido nunca de la finca en la que vivía y no conoció veterinario alguno hasta llegar aquí.");
+INSERT INTO animal (nombre, id_tipo, edad, foto, descripcion) VALUES("Pipo", 1, 5, "pipo.jpg", "Estos ojitos, grandes como mundos, pertenecen a un perrito llamado Pipo, y llegó a nosotros despuésde ser retirado por las autoridades, tras una denuncia por maltrato animal. Pipo llegó siendo un saquito de huesos, pero ya casi está recuperado.");
+INSERT INTO animal (nombre, id_tipo, edad, descripcion) VALUES("Sito", 4, 4, "Guapo");
+INSERT INTO animal (nombre, id_tipo, edad, foto, descripcion) VALUES("Lita", 1, 9, "lita.jpg", "Lita es una perra especial, de mirada noble y verdadera, ojitos que lo miran todo con sorpresa, llenos de ternura, con solo mirarla morimos de amor. Esta abuela no se merece terminar sus días en un refugio para mejores amigos abandonados, por eso está disponible en acogida permanente.");
+INSERT INTO animal (nombre, id_tipo, edad, descripcion) VALUES("Mita", 5, 10, "Amable");
+INSERT INTO animal (nombre, id_tipo, edad, descripcion) VALUES("Lila", 2, 5, "Un día nos dieron un aviso de una gata casi muerta en la calle. En el pasado seguramente ha sido una gata casera, de pelo largo, y acostumbrada a vivir con una familia. No sabemos que le pasó, pero estuvo mucho tiempo en la calle. Cuando llegó, su pelo estaba todo enredado y lleno de suciedad, ella no se podía casi mover, ¡y parecía una mopa! Se ha quedado casi ciega de un ojo, y además ha dado positivo a inmunodeficiencia felina. Ahora está a salvo, pero en una jaula no termina de recuperarse, necesita irse a una casa, y volver a tener el calor de una familia. ");
+INSERT INTO animal (nombre, id_tipo, edad, foto, descripcion) VALUES("Morita", 1, 8, "morita.jpg", "Morita es una perra que vivió mucho tiempo en la calle, de ahí su carácter desconfiado. Le encanta la compañía de otros perros, con los que juega y se lleva estupendamente. Pero es mucho más tímida con las personas.");
+INSERT INTO animal (nombre, id_tipo, edad, foto, descripcion) VALUES("Nala", 1, 10, "nala.jpg", "Esta pasada primavera se cumplieron los 7 años desde el día en que esta perra tan magnífica entraba por la puerta del refugio. Ella se llama Nala y a pesar de su poca suerte en la vida es, y siempre será, una perra fabulosa, de porte imponente y extremadamente cariñosa; es además una criatura juguetona, alegre y muy obediente.");
+INSERT INTO animal (nombre, id_tipo, edad, foto, descripcion) VALUES("Sul", 1, 5, "sul.jpg", "Sul es un perrito bastante tímido en el primer contacto, pero no lo suficiente como para resistirse a una caricia. En cuanto ve que no le vas a hacer nada, se va a acercando poco a poco, y si ve que sus compañeros se acercan a ti, entonces ese es el momento, pega un salto y se sube con sus patitas para recibir mimos. ");
+INSERT INTO animal (nombre, id_tipo, edad, foto, descripcion) VALUES("Max", 1, 10, "max.jpg", "Max tiene 10 años. Tranquilo y reservado. Querían sacrificarlo pero ante la negativa de la veterinaria, lo trajeron a la protectora.");
+INSERT INTO animal (nombre, id_tipo, edad, foto, descripcion) VALUES("Zeus", 1, 11, "zeus.jpg", "Zeus no es un perro fácil de conquistar, él se esfuerza pero rapidamente pone barreras cuando se siente inseguro, por eso necesita una persona tranquila y paciente, que sepa entender que necesita tiempo para superar sus miedos y entregarse para siempre.");
+INSERT INTO animal (nombre, id_tipo, edad, descripcion) VALUES("Loki", 2, 1, "Este precioso bebé apareció moribundo en una de nuestra colonias, siendo literalmente comido por las pulgas. No podía casi respirar ni moverse, era tan pequeño que ni siquiera había abierto los ojos. Se les recogió inmediatamente y poco a poco con los cuidados de su casa de acogida, fue cogiendo fuerzas y reponiendose, hoy es un gato alegre y gracioso. Pronto estará listo para ser adoptado. ¿ Quieres conocérle y darle un hogar?.");
+INSERT INTO animal (nombre, id_tipo, edad, descripcion) VALUES("Wilo", 2, 4, "Graciosa");
+INSERT INTO animal (nombre, id_tipo, edad, descripcion) VALUES("Lola", 3, 3, "Lista");
+INSERT INTO animal (nombre, id_tipo, edad, descripcion) VALUES("Moni", 5, 3, "Listo");
+INSERT INTO animal (nombre, id_tipo, edad, descripcion) VALUES("Milo", 4, 5, "Listo");
+INSERT INTO animal (nombre, id_tipo, edad, descripcion) VALUES("Mika", 3, 6, "Lista");
+INSERT INTO animal (nombre, id_tipo, edad, foto, descripcion) VALUES("Thor", 1, 11, "thor.jpg", "Thor es pura energía, un perro adulto pero todavía joven, perfecto para personas activas, a quienes les guste pasear a diario y tengan ganas de ayudar a un perro con pilas inagotables. Convive muy bien con hembras, pero no tanto con machos. En los paseos, pasea estupendamente con correa, y siempre está dispuesto a echarse unas carreras.");
+INSERT INTO animal (nombre, id_tipo, edad, descripcion) VALUES("Pepe", 5, 1, "Listo");

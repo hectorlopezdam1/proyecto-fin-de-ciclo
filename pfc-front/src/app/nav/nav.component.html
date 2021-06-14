@@ -1,0 +1,41 @@
+
+<nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav" style="background-color: #455881;">
+  <a class="navbar-brand py-3 px-0 px-lg-3 rounded js-scroll-trigger nav-but btn" routerLink="main" style="color: #fddfad; margin-left:20px;" (click)="scrollInicio()"><i class="fas fa-home"></i><b> Inicio</b></a>
+    <div class="container">
+
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li (click)="scrollAdopt()" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger nav-but" style="color: #fddfad;" routerLink="">Adopta</a></li>
+                <li (click)="scrollAbout()" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger nav-but" style="color: #fddfad;" routerLink="">Sobre Nosotros</a></li>
+                <li (click)="scrollNews()" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger nav-but" style="color: #fddfad;" routerLink="">Noticias</a></li>
+                <li (click)="check()" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger nav-but" style="color: #fddfad;" routerLink="form">Dar en adopción</a></li>
+            </ul>
+        </div>
+        <div class="navbar navbar-right">
+          <!-- iniciar sesion-->
+          <ul class="navbar-nav ml-auto" *ngIf="!isLogged">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger nav-but" style="color: #fddfad;" routerLink="/login">
+                <b>Iniciar Sesión </b><i class="fas fa-sign-in-alt"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- cerrar sesion-->
+          <ul class="navbar-nav ml-auto" *ngIf="isLogged">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger nav-but" style="color: #fddfad;" routerLink="/" (click)="onLogOut()">
+                <b>Cerrar Sesión </b> <i class="fas fa-sign-out-alt"></i>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+    </div>
+</nav>
+
+<style type="text/css">
+  .nav-but:hover{
+    background-color: #6582bf;
+  }
+</style>

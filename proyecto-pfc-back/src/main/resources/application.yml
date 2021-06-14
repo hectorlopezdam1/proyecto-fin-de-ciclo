@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/animals_db?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: hector
+    
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        database-platform: org.hibernate.dialect.MySQL5Dialect
+    
+  jackson:
+    time-zone: Europe/Madrid
+    locale: es_ES
+    
+  
+  
+logging:
+  level:
+    '[org.hibernate.sql]': debug
+    
+    

@@ -1,0 +1,101 @@
+<div style="background-color:#fddfad">
+  <div class="container" style=" padding:117px;">
+
+    <div style="margin-bottom: 40px; margin-left:363px;">
+      <h1>Introduce tus datos</h1>
+    </div>
+
+    <div class="container" style="width: 82%; background-color: #445881; padding:30px; border-radius: 15px;">
+    <form #f="ngForm" (ngSubmit)="onRegister()" novalidate>
+
+      <!-- nombre -->
+      <div class="row">
+        <div class="mb-3" style="width:50%">
+          <label for="nombre" class="form-label" style="color: white">Nombre completo</label>
+          <input type="text" name="nombre" class="form-control" id="nombre" [(ngModel)]="nombre" #name="ngModel" required>
+        </div>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)"
+          class="col alert alert-danger" style="height: 37px; margin-top:32px;">
+        <p *ngIf="name.errors.required" style="margin-top:-10px;">
+          Por favor, introduce tu nombre completo.
+        </p>
+        </div>
+      </div>
+
+      <!-- username -->
+      <div class="row">
+        <div class="mb-3" style="width:50%">
+          <label for="nombreUsuario" class="form-label" style="color: white">Nombre de usuario</label>
+          <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" [(ngModel)]="nombreUsuario" #username="ngModel" required minlength="5">
+        </div>
+
+        <div *ngIf="username.invalid && (username.dirty || username.touched)"
+          class="col alert alert-danger" style="height: 37px; margin-top:32px;">
+        <p *ngIf="username.errors.minlength" style="margin-top:-10px;">
+          El nombre de usuario debe tener al menos 5 caracteres.
+        </p>
+        <p *ngIf="username.errors.required" style="margin-top:-10px;">
+          Por favor, introduce un nombre de usuario.
+        </p>
+        </div>
+      </div>
+
+
+      <!-- password -->
+      <div class="row">
+        <div class="mb-3" style="width:50%">
+          <label for="password" class="form-label" style="color: white">Contraseña</label>
+          <input type="password" name="password" class="form-control" id="password" [(ngModel)]="password" #pass="ngModel" required minlength="6">
+        </div>
+
+        <div *ngIf="pass.invalid && (pass.dirty || pass.touched)"
+          class="col alert alert-danger" style="height: 37px; margin-top:32px;">
+        <p *ngIf="pass.errors.minlength" style="margin-top:-10px;">
+          La contraseña debe tener al menos 6 caracteres.
+        </p>
+        <p *ngIf="pass.errors.required" style="margin-top:-10px;">
+          Por favor, introduce una contraseña.
+        </p>
+        </div>
+      </div>
+
+      <!-- email -->
+      <div class="row">
+        <div class="mb-3" style="width:50%">
+          <label for="email" class="form-label" style="color: white">Correo eléctronico</label>
+          <input type="email" name="email" class="form-control" id="email" [(ngModel)]="email" required #mail="ngModel" ngModel email="true">
+        </div>
+
+        <div *ngIf="mail.invalid && (mail.dirty || mail.touched)"
+          class="col alert alert-danger" style="height: 37px; margin-top:32px;">
+        <p *ngIf="mail.errors.email" style="margin-top:-10px;">
+          Debes introducir una dirección de email válida.
+        </p>
+        <p *ngIf="mail.errors.required" style="margin-top:-10px;">
+          Por favor, introduce una dirección de email.
+        </p>
+        </div>
+      </div>
+
+
+      <!-- botón registrarse-->
+      <div class="form-group">
+        <button class="btn mt-2" [disabled]="!f.valid">Crear cuenta</button>
+      </div>
+      <div class="form-group">
+        <button class="btn mt-2" routerLink="/login">Ya tengo una cuenta</button>
+      </div>
+
+    </form>
+    </div>
+	</div>
+</div>
+
+<style type="text/css">
+  .btn{
+    background-color: #e89b8e;
+  }
+  .btn:hover{
+    background-color: #ff826e;
+  }
+</style>

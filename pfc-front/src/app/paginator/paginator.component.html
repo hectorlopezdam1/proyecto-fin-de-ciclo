@@ -1,0 +1,24 @@
+<ul *ngIf="paginas?.length > 0" class="pagination" style="margin: auto; width: 15%;">
+
+  <li class="page-item" *ngIf="paginador.number > 0">
+    <a class="page-link" [routerLink]="['/animals/page', paginador.number-1]">&laquo;</a> <!-- ir a la pagina anterior-->
+  </li>
+
+  <li [ngClass]="paginador.first?'disabled page-item':'page-item'"> <!-- ngClass: si está en la primera desactiva el botón, si no, se activa-->
+    <a class="page-link" [routerLink]="['/animals/page', 0]">Primera</a>
+  </li>
+
+  <li class="page-item" *ngFor="let pagina of paginas" [ngClass]="pagina-1 == paginador.number?'active':''"> <!-- ngClass: si está en la página correspondiente desactiva el botón, si no, se activa-->
+    <span class="page-link" *ngIf="pagina-1 == paginador.number">{{ pagina }}</span>
+  <a class="page-link" *ngIf="pagina-1 != paginador.number" [routerLink]="['/animals/page', pagina-1]">{{ pagina }}</a>
+  </li>
+
+  <li [ngClass]="paginador.last?'disabled page-item':'page-item'"> <!-- ngClass: si está en la última desactiva el botón, si no, se activa-->
+    <a class="page-link" [routerLink]="['/animals/page', paginador.totalPages-1]">Última</a>
+  </li>
+
+  <li class="page-item" *ngIf="paginador.number < paginador.totalPages-1">
+    <a class="page-link" [routerLink]="['/animals/page', paginador.number+1]">&raquo;</a> <!-- ir a la pagina siguiente-->
+  </li>
+
+</ul>

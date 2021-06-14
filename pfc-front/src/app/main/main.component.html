@@ -1,0 +1,94 @@
+<header class="masthead text-white text-center" style="margin-top: 70px; padding:20px; background-image: url('assets/img/image.jpg');">
+    <div class="container d-flex align-items-center flex-column" style="padding:170px;">
+
+        <h1 class="masthead-heading text-uppercase mb-0" style="font-size: 50px">woofriends</h1>
+
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-paw fa-lg"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <p class="masthead-subheading font-weight-light mb-0">"Para comprar un animal se necesita dinero. Para adoptar un animal se necesita corazón".</p>
+    </div>
+</header>
+
+<section class="page-section portfolio" id="portfolio" style= "background-color: #FDDFAD; padding:30px;">
+    <div class="container">
+
+        <h2 class="page-section-heading text-center text-uppercase mb-0" > - ADOPTA - </h2>
+
+        <div class="row justify-content-center" style="margin-top: 30px;">
+            <!-- todos-->
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    </div>
+                    <a style="cursor: pointer;" (click)="check(0)" ><img class="img-fluid" src="assets/img/todos.jpg" alt="..." style="max-height: 300px; border-radius:20px; border: 2px solid #445881"/></a>
+                </div>
+            </div>
+            <!-- perros-->
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    </div>
+                    <a style="cursor: pointer;" (click)="check(1)"><img class="img-fluid" src="assets/img/perro.jpg" alt="..." style="max-height: 300px; border-radius:20px;  border: 2px solid #445881"/></a>
+                </div>
+            </div>
+            <!-- gatos -->
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    </div>
+                    <a style="cursor: pointer;" (click)="check(2)"><img class="img-fluid" src="assets/img/gato.jpg" alt="..." style="max-height: 300px; border-radius:20px;  border: 2px solid #445881"/></a>
+                </div>
+            </div>
+            <!-- roedores -->
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    </div>
+                    <a style="cursor: pointer;" (click)="check(3)"><img class="img-fluid" src="assets/img/roedores.jpg" alt="..." style="max-height: 300px; border-radius:20px;  border: 2px solid #445881"/></a>
+                </div>
+            </div>
+            <!-- reptiles -->
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    </div>
+                    <a style="cursor: pointer;" (click)="check(4)"><img class="img-fluid" src="assets/img/camaleon.jpg" alt="..." style="max-height: 300px; border-radius:20px;  border: 2px solid #445881"/></a>
+                </div>
+            </div>
+            <!-- aves -->
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    </div>
+                    <a style="cursor: pointer;" (click)="check(5)"><img class="img-fluid" src="assets/img/pajaro.jpg" alt="..." style="max-height: 300px; border-radius:20px; border: 2px solid #445881"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section-->
+<section class="page-section text-black mb-0" id="about" style="background-color: #899dc4; padding: 20px;">
+    <div class="container" >
+
+        <h2 class="page-section-heading text-center text-uppercase" style="margin-bottom: 20px;"> - Sobre Nosotros - </h2>
+
+        <div class="row" style="margin-left:320px;">
+            <div class="col-lg-4 ml-auto"><p class="lead">WooFriends es el portal donde puedes encontrar animales en adopción. Tanto particulares como protectoras pueden registrarse en nuestra página con el objetivo de buscar un hogar para las mascotas más necesitadas.</p></div>
+            <div class="col-lg-4 mr-auto"><p class="lead">Aquí puedes ver todos los animales y contactar con los cuidadores para darles un hogar a estos indefensos animalitos. Si estás buscando un animal de compañía y quieres ayudar, este es tu sitio.</p></div>
+        </div>
+    </div>
+</section>
+<!-- News Section-->
+<section class="page-section" id="contact" style="background-color: #FDDFAD; padding:20px;">
+  <h2 class="page-section-heading text-center text-uppercase mb-2">- Noticias -</h2>
+
+      <div class="row"  style="margin-left:100px;">
+        <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Pese a que se trata de un «hecho insólito», los vecinos de este pueblo de <a href="https://twitter.com/hashtag/CangasdelNarcea?src=hash&amp;ref_src=twsrc%5Etfw">#CangasdelNarcea</a> dicen estar acostumbrados a ver osos a diario por el entorno <a href="https://t.co/ZA05ltEhGT">https://t.co/ZA05ltEhGT</a></p>&mdash; La Voz de Galicia (@lavozdegalicia) <a href="https://twitter.com/lavozdegalicia/status/1399455082274508800?ref_src=twsrc%5Etfw">May 31, 2021</a></blockquote>
+        <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Las aves invasoras que han encontrado refugio en humedales y espacios de A Coruña <a href="https://twitter.com/hashtag/Ornitolog%C3%ADa?src=hash&amp;ref_src=twsrc%5Etfw">#Ornitología</a> <a href="https://t.co/emRy4XGzCT">https://t.co/emRy4XGzCT</a> <a href="https://t.co/aZGDKlbBzO">pic.twitter.com/aZGDKlbBzO</a></p>&mdash; La Voz de Galicia (@lavozdegalicia) <a href="https://twitter.com/lavozdegalicia/status/1399394215432527872?ref_src=twsrc%5Etfw">May 31, 2021</a></blockquote>
+        <blockquote class="twitter-tweet"><p lang="es" dir="ltr">🔴Tor, un perro de búsqueda de la Guardia Civil, encuentra en buen estado 👏👏 a la vecina de 47 años de <a href="https://twitter.com/hashtag/Baralla?src=hash&amp;ref_src=twsrc%5Etfw">#Baralla</a> desaparecida desde ayer <a href="https://t.co/QZiBWCaERI">https://t.co/QZiBWCaERI</a></p>&mdash; La Voz de Galicia (@lavozdegalicia) <a href="https://twitter.com/lavozdegalicia/status/1222823279485808640?ref_src=twsrc%5Etfw">January 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+</section>

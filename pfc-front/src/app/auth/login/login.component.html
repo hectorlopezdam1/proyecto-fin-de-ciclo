@@ -1,0 +1,47 @@
+<div style="background-color:#fddfad">
+  <div class="container" style="padding:182px;">
+
+    <div style="margin-bottom: 40px; margin-left:362px;">
+      <h1>Inicia sesión</h1>
+    </div>
+
+
+    <div class="container" style="width: 30%; background-color: #445881; padding:30px; border-radius: 15px;">
+      <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+        <!-- username -->
+        <div class="mb-3">
+          <label for="nombreUsuario" class="form-label" style="color: white">Nombre de usuario</label>
+          <input type="text" name="nombreUsuario" class="form-control" id="nombreUsuario" [(ngModel)]="nombreUsuario" required>
+        </div>
+
+        <!-- password -->
+        <div class="mb-3">
+          <label for="password" class="form-label" style="color: white">Contraseña</label>
+          <input type="password" name="password" class="form-control" id="password" [(ngModel)]="password" required>
+        </div>
+
+        <!-- botón iniciar sesion-->
+        <div class="form-group">
+          <button class="btn mt-2" [disabled]="!f.valid">Iniciar sesión</button>
+        </div>
+        <!-- botón registrarse-->
+        <div class="form-group">
+          <button class="btn mt-2" routerLink="/registro">Crear una cuenta</button>
+        </div>
+
+      </form>
+    </div>
+
+
+	</div>
+</div>
+
+<style type="text/css">
+  .btn{
+    background-color: #e89b8e;
+  }
+  .btn:hover{
+    background-color: #ff826e;
+  }
+</style>
